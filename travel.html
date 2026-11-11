@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanderly | Explore Beyond</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="travel.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar container">
+      <a href="#home" class="logo">wanderly<span>.</span></a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#about">About Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact" class="nav-button">Plan a Trip ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <span class="eyebrow">YOUR NEXT ADVENTURE STARTS HERE</span>
+        <h1>Collect moments,<br><em>not miles.</em></h1>
+        <p>Discover beautiful places, unforgettable experiences and journeys worth telling stories about.</p>
+        <a href="#destinations" class="primary-btn">Explore Destinations <span>↗</span></a>
+      </div>
+      <div class="hero-note">✦ THE WORLD IS WAITING FOR YOU</div>
+    </section>
+
+    <section class="search-section container">
+      <div class="search-box">
+        <div class="search-field">
+          <label for="searchInput">WHERE TO?</label>
+          <input type="text" id="searchInput" placeholder="Search destinations...">
+        </div>
+        <div class="search-field">
+          <label for="travelDate">WHEN?</label>
+          <input type="date" id="travelDate">
+        </div>
+        <div class="search-field">
+          <label for="travelers">TRAVELLERS</label>
+          <select id="travelers">
+            <option value="1">1 Traveller</option>
+            <option value="2" selected>2 Travellers</option>
+            <option value="3">3 Travellers</option>
+            <option value="4">4 Travellers</option>
+            <option value="5">5+ Travellers</option>
+          </select>
+        </div>
+        <button class="search-btn" id="searchBtn">Search Trips ↗</button>
+      </div>
+    </section>
+
+    <section class="destinations section container" id="destinations">
+      <div class="section-top">
+        <div>
+          <span class="section-label">EXPLORE THE WORLD</span>
+          <h2>Places you'll <em>fall for.</em></h2>
+          <p>Handpicked escapes for every kind of traveller.</p>
+        </div>
+        <span class="small-note">DISCOVER YOUR HAPPY PLACE ↗</span>
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-filter="all">All Places</button>
+        <button class="filter" data-filter="beach">🏖 Beaches</button>
+        <button class="filter" data-filter="mountain">⛰ Mountains</button>
+        <button class="filter" data-filter="city">🏙 Cities</button>
+        <button class="filter" data-filter="nature">🌿 Nature</button>
+        <button class="filter" data-filter="favorites">♡ Favourites</button>
+      </div>
+
+      <div class="destination-grid" id="destinationGrid">
+
+        <article class="destination-card" data-category="beach" data-name="bali indonesia">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900&auto=format&fit=crop" alt="Bali temple and landscape">
+            <span class="card-tag">BEST SELLER</span>
+            <button class="heart" aria-label="Add Bali to favourites">♡</button>
+          </div>
+          <div class="card-info">
+            <span class="location">📍 INDONESIA</span>
+            <div class="card-title"><h3>Bali Escape</h3><span>★ 4.9</span></div>
+            <p>Sunsets, temples & tropical dreams.</p>
+            <div class="card-bottom">
+              <div><small>STARTING FROM</small><strong>₹24,999 <span>/ person</span></strong></div>
+              <button class="view-btn" data-place="Bali Escape">View Trip ↗</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card" data-category="mountain" data-name="manali india">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=900&auto=format&fit=crop" alt="Mountains in Manali">
+            <span class="card-tag">POPULAR</span>
+            <button class="heart" aria-label="Add Manali to favourites">♡</button>
+          </div>
+          <div class="card-info">
+            <span class="location">📍 HIMACHAL, INDIA</span>
+            <div class="card-title"><h3>Magical Manali</h3><span>★ 4.8</span></div>
+            <p>Snowy peaks & mountain mornings.</p>
+            <div class="card-bottom">
+              <div><small>STARTING FROM</small><strong>₹8,499 <span>/ person</span></strong></div>
+              <button class="view-btn" data-place="Magical Manali">View Trip ↗</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card" data-category="city" data-name="paris france">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=900&auto=format&fit=crop" alt="Eiffel Tower in Paris">
+            <span class="card-tag">ICONIC</span>
+            <button class="heart" aria-label="Add Paris to favourites">♡</button>
+          </div>
+          <div class="card-info">
+            <span class="location">📍 FRANCE</span>
+            <div class="card-title"><h3>Paris Getaway</h3><span>★ 4.9</span></div>
+            <p>Little cafés & unforgettable streets.</p>
+            <div class="card-bottom">
+              <div><small>STARTING FROM</small><strong>₹79,999 <span>/ person</span></strong></div>
+              <button class="view-btn" data-place="Paris Getaway">View Trip ↗</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card" data-category="nature" data-name="kerala india">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=900&auto=format&fit=crop" alt="Kerala backwaters">
+            <span class="card-tag">PEACEFUL</span>
+            <button class="heart" aria-label="Add Kerala to favourites">♡</button>
+          </div>
+          <div class="card-info">
+            <span class="location">📍 KERALA, INDIA</span>
+            <div class="card-title"><h3>Kerala Retreat</h3><span>★ 4.8</span></div>
+            <p>Backwaters, greenery & slow living.</p>
+            <div class="card-bottom">
+              <div><small>STARTING FROM</small><strong>₹14,999 <span>/ person</span></strong></div>
+              <button class="view-btn" data-place="Kerala Retreat">View Trip ↗</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card" data-category="beach" data-name="maldives">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=900&auto=format&fit=crop" alt="Maldives beach resort">
+            <span class="card-tag">LUXURY</span>
+            <button class="heart" aria-label="Add Maldives to favourites">♡</button>
+          </div>
+          <div class="card-info">
+            <span class="location">📍 MALDIVES</span>
+            <div class="card-title"><h3>Maldives Bliss</h3><span>★ 5.0</span></div>
+            <p>Crystal waters & endless blue skies.</p>
+            <div class="card-bottom">
+              <div><small>STARTING FROM</small><strong>₹59,999 <span>/ person</span></strong></div>
+              <button class="view-btn" data-place="Maldives Bliss">View Trip ↗</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="destination-card" data-category="mountain" data-name="switzerland alps">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=900&auto=format&fit=crop" alt="Snowy mountains and aurora">
+            <span class="card-tag">DREAM TRIP</span>
+            <button class="heart" aria-label="Add Switzerland to favourites">♡</button>
+          </div>
+          <div class="card-info">
+            <span class="location">📍 SWITZERLAND</span>
+            <div class="card-title"><h3>Swiss Alps</h3><span>★ 4.9</span></div>
+            <p>Alpine views & picture-perfect villages.</p>
+            <div class="card-bottom">
+              <div><small>STARTING FROM</small><strong>₹94,999 <span>/ person</span></strong></div>
+              <button class="view-btn" data-place="Swiss Alps">View Trip ↗</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <p id="noResults" class="no-results">No destinations found. Try another search!</p>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1000&auto=format&fit=crop" alt="Beautiful mountain lake">
+          <div class="image-sticker">GO SOMEWHERE<br>NEW ✳</div>
+        </div>
+        <div class="about-content">
+          <span class="section-label">A LITTLE ABOUT US</span>
+          <h2>More than a trip.<br><em>A feeling.</em></h2>
+          <p>We believe travelling isn't just about ticking places off a list. It's about getting lost in new streets, meeting different people and coming home with stories that stay forever.</p>
+          <p>At Wanderly, we make discovering your next favourite place feel effortless.</p>
+          <div class="stats">
+            <div><strong>25+</strong><span>Destinations</span></div>
+            <div><strong>5k+</strong><span>Happy Travellers</span></div>
+            <div><strong>4.9★</strong><span>Guest Rating</span></div>
+          </div>
+          <a href="#contact" class="outline-btn">Get to Know Us ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits section container">
+      <div class="center-heading">
+        <span class="section-label">THE WANDERLY WAY</span>
+        <h2>Travel easy. <em>Live fully.</em></h2>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit">
+          <div class="benefit-icon">✈</div>
+          <h3>Thoughtful Trips</h3>
+          <p>Travel experiences designed around places worth exploring.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">♡</div>
+          <h3>Made for You</h3>
+          <p>From relaxing beaches to exciting mountain adventures.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">☼</div>
+          <h3>Beautiful Memories</h3>
+          <p>Less worrying about plans, more enjoying every moment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <div class="center-heading">
+          <span class="section-label">KIND WORDS</span>
+          <h2>Stories from <em>the road.</em></h2>
+        </div>
+        <div class="review-grid">
+          <div class="review">
+            <span class="stars">★★★★★</span>
+            <p>"The Bali trip was everything we hoped for. Beautiful places, peaceful mornings and so many memories!"</p>
+            <strong>— Aanya S.</strong>
+            <small>Bali Escape</small>
+          </div>
+          <div class="review">
+            <span class="stars">★★★★★</span>
+            <p>"Our mountain getaway was exactly the break we needed. I would happily do it all over again."</p>
+            <strong>— Rohan M.</strong>
+            <small>Magical Manali</small>
+          </div>
+          <div class="review">
+            <span class="stars">★★★★★</span>
+            <p>"Loved how simple everything felt. The destination ideas helped us plan an amazing holiday."</p>
+            <strong>— Meera K.</strong>
+            <small>Kerala Retreat</small>
+          </div>
+        </div>
+        <p class="demo-note">Sample reviews shown for demonstration.</p>
+      </div>
+    </section>
+
+    <section class="newsletter section container" id="contact">
+      <div class="newsletter-content">
+        <span class="section-label">LET'S KEEP IN TOUCH</span>
+        <h2>A little wanderlust<br><em>in your inbox.</em></h2>
+        <p>Travel inspiration, hidden gems and exciting destination ideas, delivered to you.</p>
+        <form id="newsletterForm">
+          <input type="email" id="email" placeholder="Enter your email address" required>
+          <button type="submit">Join the Journey ↗</button>
+        </form>
+        <p id="formMessage"></p>
+      </div>
+      <div class="newsletter-decoration">✳</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="logo">wanderly<span>.</span></a>
+        <p>For the places you'll go and<br>the stories you'll bring home.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#destinations">Destinations</a>
+        <a href="#about">About Us</a>
+        <a href="#reviews">Testimonials</a>
+      </div>
+      <div>
+        <h4>Discover</h4>
+        <a href="#destinations">Beach Escapes</a>
+        <a href="#destinations">Mountain Trips</a>
+        <a href="#destinations">City Breaks</a>
+      </div>
+      <div>
+        <h4>Say Hello</h4>
+        <a href="mailto:hello@wanderly.example">hello@wanderly.example</a>
+        <p>Made for curious travellers.</p>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>© 2026 Wanderly. A travel website concept.</span>
+      <span>Made with ♡ for the journey.</span>
+    </div>
+  </footer>
+
+  <div class="modal" id="tripModal">
+    <div class="modal-box">
+      <button class="close-modal" id="closeModal" aria-label="Close">×</button>
+      <span class="section-label">YOUR NEXT ADVENTURE</span>
+      <h2 id="modalTitle">Your Trip</h2>
+      <p id="modalDetails"></p>
+      <a href="mailto:hello@wanderly.example?subject=Travel%20Enquiry" class="primary-btn">Enquire About Trip ↗</a>
+      <small>Demo enquiry — replace the email with your own.</small>
+    </div>
+  </div>
+
+  <script src="travel.js"></script>
+</body>
+</html>
